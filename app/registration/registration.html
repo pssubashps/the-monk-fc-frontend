@@ -1,0 +1,23 @@
+<h2>SignUp</h2>
+<form  name="regForm" novalidate >
+	<div class="form-group has-danger">
+		<label for="usr">Email:</label> 
+		<input type="email"
+			class="form-control" name="userEmail"
+			ng-model="user.email" required />
+		<span ng-show="regForm.userEmail.$dirty && regForm.userEmail.$invalid || validationFlag">
+			  <span ng-show="regForm.userEmail.$error.required">Email is required.</span>
+			   <span ng-show="regForm.userEmail.$error.email">Email is invalid.</span>
+		</span>
+	</div>
+	<div class="form-group">
+		<label for="pwd">Password:</label> <input type="password" name="userPassword"
+			class="form-control" ng-model="user.password" required/>
+			<span ng-show="regForm.userPassword.$dirty && regForm.userPassword.$invalid || validationFlag">
+			  <span ng-show="regForm.userPassword.$error.required">Password is required.</span>
+		</span>
+	</div>
+	<div class="form-group">
+		<input type="button" ng-click="register()"  class="btn btn-primary active" value="signup"/>
+	</div>
+</form>

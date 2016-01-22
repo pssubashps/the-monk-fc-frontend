@@ -1,0 +1,10 @@
+bower_components/
+
+
+.project
+.settings/
+
+.buildpath
+.bower_componens/
+
+.bower_components/

@@ -1,0 +1,15 @@
+{
+  "errors": {},
+  "data": {
+    "service_details": [
+      {
+      "id" :1,
+        "service_name": "twilio"
+      },
+      {
+      "id":2,
+        "service_name": "nexamp"
+      }
+    ]
+  }
+}
