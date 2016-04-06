@@ -15,15 +15,13 @@
 <script src="bower_components/angular-ui-grid/ui-grid.min.js"></script>
 <script src="bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>
 <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
-
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
 <script src="app/app.module.js"></script>
-<script src="app/service/serviceService.js"></script>
+<script src="app/landing/landingService.js"></script>
 <script src="app/app.route.js"></script>
-<script src="app/registration/registrationController.js"></script>
+<script src="app/landing/landingController.js"></script>
 
-<script src="app/service/serviceController.js"></script>
-<script src="app/sms/smsRestService.js"></script>
-<script src="app/sms/smsController.js"></script>
+
 
 <link rel="stylesheet"
 	href="bower_components/angular-ui-grid/ui-grid.min.css">
@@ -36,7 +34,7 @@
 			<div ng-include src="'app/partials/menu.html'"></div>
 			<!-- Menu Ends Here -->
 
-			<div class="col-sm-9" ng-view>
+			<div class="quiz" ng-view>
 				<!-- Main COntent goes here Start-->
 
 				<!-- Main COntent goes here End-->

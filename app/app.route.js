@@ -6,22 +6,15 @@ myapp.config(['$routeProvider',
   function($routeProvider,$stateProvider) {
     $routeProvider.
     when('/', {
-        templateUrl: 'app/registration/registration.html',
-        controller: 'registrationController'
+        templateUrl: 'app/landing/landing.html',
+        controller: 'landingController'
       }).
-      when('/register', {
-    	  templateUrl: 'app/registration/registration.html',
-          controller: 'registrationController'
+       when('/q', {
+        templateUrl: 'app/landing/question.html',
+        controller: 'landingController'
       }).
-      when('/service', {
-    	  templateUrl: 'app/service/service.html',
-          controller: 'serviceController'
-      }).
-      when('/sms', {
-    	  templateUrl: 'app/sms/sms.html',
-          controller: 'smsController'
-      }).
+    	
       otherwise({
-        redirectTo: '/register'
+        redirectTo: '/'
       });
   }]);
