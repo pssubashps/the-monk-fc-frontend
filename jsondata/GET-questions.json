@@ -1,0 +1,54 @@
+[{
+        "question": "Brass gets discoloured in air because of the presence of which of the following gases in air?",
+        "option1": "Oxygen",
+        "option2": "Hydrogen sulphide",
+        "option3": "Carbon dioxide",
+        "option4": "Nitrogen",
+        "ans": "option2"
+    }, {
+        "question": "Which of the following is a non metal that remains liquid at room temperature?",
+        "option1": "Phosphorous",
+        "option2": "Bromine",
+        "option3": "Chlorine",
+        "option4": "Helium",
+        "ans": "option2"
+    }, {
+        "question": "Chlorophyll is a naturally occurring chelate compound in which central metal is ",
+        "option1": "copper",
+        "option2": "magnesium",
+        "option3": "iron",
+        "option4": "calcium",
+        "ans": "option2"
+    }, {
+        "question": "Which of the following metals forms an amalgam with other metals?",
+        "option1": "Tin",
+        "option2": "Lead",
+        "option3": "Mercury",
+        "option4": "Zinc",
+        "ans": "option3"
+    }, {
+        "question": "What is part of a database that holds only one type of information?",
+        "option1": "Report",
+        "option2": "Field",
+        "option3": "Record",
+        "option4": "File",
+        "ans": "option2"
+    }, {
+        "question": "'OS' computer abbreviation usually means ?",
+        "option1": "Order of Significance",
+        "option2": "Open Software",
+        "option3": "Operating System",
+        "option4": "Optical Sensor",
+        "ans": "option3"
+    }, {
+        "question": "The electromagnetic coils on the neck of the picture tube or tubes which pull the electron beam from side to side and up and down are called a...?",
+        "option1": "Transformer",
+        "option2": "Yoke",
+        "option3": "Capacitor",
+        "option4": "Diode",
+        "ans": "option2"
+    }
+
+    
+
+]

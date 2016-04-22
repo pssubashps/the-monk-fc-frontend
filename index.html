@@ -18,9 +18,9 @@
 <script src="bower_components/jquery/dist/jquery.min.js"></script>
 <script src="app/app.module.js"></script>
 <script src="app/landing/landingService.js"></script>
-<script src="app/app.route.js"></script>
+<script src="app/app.route.js"></script> 
 <script src="app/landing/landingController.js"></script>
-
+<script src="app/timer/TimerController.js"></script>
 
 
 <link rel="stylesheet"
@@ -30,10 +30,19 @@
 <body>
 	<div class="container-fluid">
 		<div class="row content">
+		<div class = "page-header">
+   
+   <h1>
+      Example page header 
+      <small>Subtext for header</small>
+   </h1>
+   
+</div>
+
 			<!-- Menu Starts Here -->
 			<div ng-include src="'app/partials/menu.html'"></div>
 			<!-- Menu Ends Here -->
-
+			<div ng-include src="'app/partials/clock.html'"></div>
 			<div class="quiz" ng-view>
 				<!-- Main COntent goes here Start-->
 
