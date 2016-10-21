@@ -1,13 +1,13 @@
 /**
  * http://usejsdoc.org/
  */
-myapp.factory('questionFactory', function($http, $q) {
+myapp.factory('questionFactory', function($http, $q, BASE_URL) {
 	return {
 		getAllQuestions: function() {
 			var deferred = $q.defer();
 			$http({
 				method: 'GET',
-				url: 'jsondata/GET-questions.json'
+				url: BASE_URL+'questions'
 			}).then(function successCallback(response) {
 				//console.log(response);
 				deferred.resolve(response);

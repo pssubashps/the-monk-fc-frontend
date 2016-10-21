@@ -8,7 +8,7 @@ myapp.controller('landingController', function($scope, $location, $parse, questi
   $scope.questions = [];
 
   $scope.showSubmit = true;
-
+  var interval;
   function resetValidtionKeys() {
     console.log("reset");
     $scope.option1_wrong = false;
@@ -37,6 +37,7 @@ myapp.controller('landingController', function($scope, $location, $parse, questi
     myIndex = getNext($scope.totalQuestions);
     console.log("Reading " + myIndex);
     $scope.question = $scope.questions[myIndex];
+    startTimer();
   }
 
   function getNext(max) {
@@ -45,18 +46,18 @@ myapp.controller('landingController', function($scope, $location, $parse, questi
   }
 
   function markRightAnswer(right) {
-    console.log(right);
+
     switch (right) {
-      case 'option1':
+      case '1':
         $scope.option1_right = true;
         break;
-      case 'option2':
+      case '2':
         $scope.option2_right = true;
         break;
-      case 'option3':
+      case '3':
         $scope.option3_right = true;
         break;
-      case 'option4':
+      case '4':
         $scope.option4_right = true;
         break;
     }
@@ -64,16 +65,16 @@ myapp.controller('landingController', function($scope, $location, $parse, questi
 
   function markWrongAnswer(wrong) {
     switch (wrong) {
-      case 'option1':
+      case '1':
         $scope.option1_wrong = true;
         break;
-      case 'option2':
+      case '2':
         $scope.option2_wrong = true;
         break;
-      case 'option3':
+      case '3':
         $scope.option3_wrong = true;
         break;
-      case 'option4':
+      case '4':
         $scope.option4_wrong = true;
         break;
     }
@@ -85,30 +86,62 @@ myapp.controller('landingController', function($scope, $location, $parse, questi
     $scope.userans = false;
   }
   $scope.validateAnswer = function() {
+     clearInterval(interval);
     resetValidtionKeys();
-    
 
-    qans = $scope.question.ans;
+
+    qans = $scope.question.correct_answer;
     userans = $scope.userans;
-    console.log(userans);
+
     //  $parse(userans+'_wrong').assign($scope,true);
 
-    console.log($scope.option2_wrong);
-    if (qans === userans) {
-      alert("right");
-      markRightAnswer(qans);
+
+    if (qans === "answer" + userans) {
+
+      markRightAnswer(userans);
 
     } else {
-      markRightAnswer(qans);
+      markRightAnswer(qans.replace("answer", ""));
       markWrongAnswer(userans);
     }
     $scope.showSubmit = false;
 
+
+  }
+
+  function startTimer() {
+    var time = 10;
+    var initialOffset = '440';
+    var i = 1;
+    $scope.stroke_dashoffset = {
+      'stroke-dashoffset': (initialOffset - (1 * (initialOffset / time)))
+    };
+
+    // $('.circle_animation').css('stroke-dashoffset', );
+
+    interval = setInterval(function() {
+      $('h2').text(i);
+      if (i == time) {
+        clearInterval(interval);
+        $scope.validateAnswer();
+        return;
+      }
+
+      $scope.stroke_dashoffset = {
+        'stroke-dashoffset': (initialOffset - ((i + 1) * (initialOffset / time)))
+
+      };
+      console.log($scope.stroke_dashoffset);
+      //  $scope.stroke_dashoffset =  initialOffset-((i+1)*(initialOffset/time));
+      //$('.circle_animation').css('stroke-dashoffset',);
+      i++;
+    }, 1000);
   }
 
   function init() {
     getQuestions();
     resetValidtionKeys();
+    startTimer();
 
   }
   init();

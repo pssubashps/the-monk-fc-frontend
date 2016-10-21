@@ -1,5 +1,5 @@
   /* Set height of the grid so .sidenav can be 100% (adjust if needed) */
-    .row.content {height: 1500px}
+   /* .row.content {height: 1500px}*/
     
     /* Set gray background color and 100% height */
     .sidenav {
@@ -61,11 +61,11 @@
 }
 .quiz
 {
-  width: 500px;
+  width: 800px;
 margin: 50px auto 0px;
 float: none;
-border: 1px solid rgb(238, 238, 238)  ;
-background: rgb(255, 255, 255)   none repeat scroll 0% 0%;
+border: 1px solid rgb(269, 238, 238)  ;
+background: #E6E6E6  none repeat scroll 0% 0%;
 padding: 20px 50px;
 -webkit-transition: -webkit-transform 1s;
     -moz-transition: -moz-transform 1s;
@@ -79,6 +79,30 @@ padding: 20px 50px;
 
 }
 
+
+/** TImer **/
+.item {
+    position: relative;
+    float: left;
+}
+
+.item h2 {
+    text-align:center;
+    position: absolute;
+    line-height: 125px;
+    width: 100%;
+}
+
+svg {
+   -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+}
+
+.circle_animation {
+  stroke-dasharray: 440; /* this value is the pixel circumference of the circle */
+  stroke-dashoffset: 440;
+  transition: all 1s linear;
+}
 
 
     
