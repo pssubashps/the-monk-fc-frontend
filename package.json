@@ -7,6 +7,9 @@
     "start": "web.js",
     "postinstall": "./node_modules/bower/bin/bower install"
   },
+  "engines": {
+    "node": "4.1.1"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/pssubashps/quiz-fe.git"
