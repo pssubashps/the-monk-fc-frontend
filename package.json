@@ -1,0 +1,27 @@
+{
+  "name": "quiz-fe",
+  "version": "1.0.0",
+  "description": "Quiz Application",
+  "main": "web.js",
+  "scripts": {
+    "start": "web.js",
+    "preinstall" : "bower install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pssubashps/quiz-fe.git"
+  },
+  "keywords": [
+    "quiz"
+  ],
+  "author": "Subash",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pssubashps/quiz-fe/issues"
+  },
+  "homepage": "https://github.com/pssubashps/quiz-fe#readme",
+  "dependencies": {
+    "express": "^4.14.0",
+    "gzippo": "^0.2.0"
+  }
+}
