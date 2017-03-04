@@ -1,6 +1,6 @@
 'use strict';
 var myapp = angular.module("myapp",['ngRoute','ui.grid','ui.grid.selection', 'ui.grid.edit','ui.grid.cellNav','ngResource','ui.bootstrap']);
-myApp.config(['$httpProvider', function($httpProvider) {
+myapp.config(['$httpProvider', function($httpProvider) {
         $httpProvider.defaults.useXDomain = true;
         delete $httpProvider.defaults.headers.common['X-Requested-With'];
     }
