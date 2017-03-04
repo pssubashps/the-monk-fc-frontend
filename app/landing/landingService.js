@@ -1,13 +1,13 @@
 /**
  * http://usejsdoc.org/
  */
-myapp.factory('questionFactory', function($http, $q, BASE_URL) {
+myapp.factory('playersFactory', function($http, $q, BASE_URL) {
 	return {
-		getAllQuestions: function() {
+		getPlayerPoints: function() {
 			var deferred = $q.defer();
 			$http({
 				method: 'GET',
-				url: BASE_URL+'questions'
+				url: BASE_URL+'welcome/index_json'
 			}).then(function successCallback(response) {
 				//console.log(response);
 				deferred.resolve(response);

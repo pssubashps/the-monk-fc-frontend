@@ -1,7 +1,26 @@
-<br/><br/>
-<form  name="regForm" novalidate >
-	
-	<div class="form-group">
-		<input type="button" ng-click="start()"  class="btn btn-primary active" value="Start"/>
-	</div>
-</form>
+<h3>Total Match Played : {{totalMatchCount}}</h3>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Player</th>
+      <th>Match Played</th>
+      <th>Point</th>
+    </tr>
+    <tr>
+      <th></th>
+      <th><input type="text" placeholder="Filter By Player" ng-model="filter_player"></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="p in players | filter:filter_player">
+      <th scope="row">{{$index +1}}</th>
+      <td>{{p.player_name}}</td>
+      <td>{{p.played_match_count}}</td>
+      <td>{{p.player_point}}</td>
+    </tr>
+  
+  </tbody>
+</table>
